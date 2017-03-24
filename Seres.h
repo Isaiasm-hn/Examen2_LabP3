@@ -1,39 +1,33 @@
 #include <iostream>
 #include <string>
 
-#ifndef SERES_H
-#define SERES_H
 using namespace std;
 
+#ifndef SERES_H
+#define SERES_H
 class Seres{
 protected:
+	
 	string raza;
 	int edad;
 	string nombre;
 	EvilFruit* fruta;
+	bool armadura=false;
+	bool observacion=false;
+	bool rey=false;
+	bool fruit=false;
+
 public:
-	Seres(string,int,string, EvilFruit*)
-	void setEdad(int);
-	int getEdad();
-
-	void setEvilFruit(EvilFruit*);
-	EvilFruit* getEvilFruit();
-	
+	Seres(string,int,string, EvilFruit*,bool ,bool ,bool,bool);
 	~Seres();
+	virtual void write(ofstream&);
 	
-	void setRaza(string);
-	string getRaza();
+
 	
-	void setNombre(string);
-	string getNombre();
 
-	void setEdad(int);
-	int getEdad();
 
-	void setFruit(EvilFruit*);
-	EvilFruit* getFruit();
 
-	~Seres();
+
 	
 };
 #endif

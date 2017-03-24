@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "EvilFruit.h"
+#include <fstream>
+
 
 using namespace std;
 
@@ -12,9 +13,8 @@ protected:
 public:
 	void setNombre(string);
 	string getNombre();
-
+	
 	EvilFruit(string);
 	~EvilFruit();
-	
 };
 #endif

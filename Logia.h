@@ -1,9 +1,8 @@
-#include "EvilFruit"
+#include "EvilFruit.h"
 
 #ifndef LOGIA_H
 #define LOGIA_H
-
-class Logia{
+class Logia:public EvilFruit{
 protected:
 	string elemento;	
 public:
