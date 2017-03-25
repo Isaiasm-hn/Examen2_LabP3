@@ -23,7 +23,6 @@ string MenuOceano();
 int main(){
 	vector<Seres*> ser;
 	vector<EvilFruit*> frutos;
-	
 	do{	
 		cout<<endl;
 		int menu=MenuPrincipal();
@@ -144,6 +143,7 @@ int main(){
 }
 EvilFruit* getFrutas(vector<EvilFruit*> fr){
 	int opc;
+	cout<<endl;
 	for (int i = 0; i < fr.size(); ++i){
 		cout<<(i+1)<<")- "<<static_cast<EvilFruit*>(fr.at(i))->getNombre()<<endl;	
 	}
@@ -170,6 +170,7 @@ int MenuPrincipal(){
 
 int MenuSeres(){
 	int opc;
+	cout<<endl;
 	do{
 		cout<<"----------------------------\n"<<
 			  "1) Revolucionarios\n"<<
@@ -238,6 +239,7 @@ string MenuRazas(){
 }
 string MenuRango(){
 	int opc;
+	cout<<endl;
 	do{
 		cout<<"1) cadete\n2) teniente\n3) vice-almirante\n4) almirante\n5) almirante de flota\n"<<
 		   "Ingrese numero Rango: ";
@@ -273,6 +275,7 @@ string MenuRango(){
 
 string MenuOceano(){
 	int opc;
+	cout<<endl;
 	do{
 		cout<<"1) east\n2) west\n3) south\n4) north blue\n5) grand line\n6) new world\n"<<
 		   "Ingrese numero Rango: ";
