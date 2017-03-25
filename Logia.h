@@ -6,12 +6,12 @@ class Logia:public EvilFruit{
 protected:
 	string elemento;	
 public:
-
-	void setElemento(string);
-	string getElemento();
-
+	Logia(){
+		
+	}
 	Logia(string,string);
-	
 	~Logia();
+	void escribir(ofstream& file);
 	
 };
+#endif

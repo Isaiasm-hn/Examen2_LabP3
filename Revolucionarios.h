@@ -9,6 +9,6 @@ public:
 	
 	Revolucionarios(string,int,string, EvilFruit*,bool ,bool ,bool,bool);
 	~Revolucionarios();
-	void write(oftream&);
+	void escribir(ofstream&);
 };
 #endif

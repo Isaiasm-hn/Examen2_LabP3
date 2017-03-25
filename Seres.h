@@ -1,5 +1,9 @@
 #include <iostream>
 #include <string>
+#include "EvilFruit.h"
+#include <ctime>
+#include <sstream>
+#include <fstream>
 
 using namespace std;
 
@@ -12,15 +16,16 @@ protected:
 	int edad;
 	string nombre;
 	EvilFruit* fruta;
-	bool armadura=false;
-	bool observacion=false;
-	bool rey=false;
-	bool fruit=false;
+	bool armadura;
+	bool observacion;
+	bool rey;
+	bool fruit;
 
 public:
+	
 	Seres(string,int,string, EvilFruit*,bool ,bool ,bool,bool);
 	~Seres();
-	virtual void write(ofstream&);
+	virtual void escribir(ofstream&);
 	
 
 	

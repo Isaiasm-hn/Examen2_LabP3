@@ -11,7 +11,7 @@ protected:
 public:
 	Marina(string,int,string, EvilFruit*,bool ,bool ,bool,bool,string);
 	~Marina();
-	void write(ofstream&);
+	void escribir(ofstream&);
 	
 };
 #endif

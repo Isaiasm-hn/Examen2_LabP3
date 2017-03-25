@@ -11,9 +11,12 @@ class Zoan: public EvilFruit{
 protected:
 	string tipo;
 public:
-	void setTipo(string);
-	string getTipo();
+	Zoan(){
+		
+	}
 	Zoan(string,string);
 	~Zoan();
+	void escribir(ofstream&);
 	
 };
+#endif

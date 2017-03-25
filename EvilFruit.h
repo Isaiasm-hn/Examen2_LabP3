@@ -11,10 +11,12 @@ class EvilFruit{
 protected:
 	string nombre;
 public:
-	void setNombre(string);
+	EvilFruit(){
+		
+	}
 	string getNombre();
-	
 	EvilFruit(string);
 	~EvilFruit();
+	void escribir(ofstream&);
 };
 #endif
