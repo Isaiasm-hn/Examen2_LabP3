@@ -25,6 +25,7 @@ int main(){
 	vector<EvilFruit*> frutos;
 	
 	do{	
+		cout<<endl;
 		int menu=MenuPrincipal();
 		switch(menu){
 			case 1:{
@@ -61,13 +62,14 @@ int main(){
 				cout<<"Ingrese edad: ";
 				cin>>edad;
 				raza=MenuRazas();
+				cout<<endl;
 				int  menu_seres=MenuSeres();
 				switch(menu_seres){
 					case 1:{
 
 						Seres* temp=new Revolucionarios(raza,edad,nombre,fr,armadura,observacion,rey,fruta);
 						ser.push_back(temp);
-						cout<<"Se agrego un Pija de Revolucionario";
+						cout<<"Se agrego un Pija de Revolucionario"<<endl;
 
 						break;
 					}
@@ -87,12 +89,49 @@ int main(){
 						cout<<"Ingrese Funcion: ";
 						cin.ignore();
 						getline(cin,tripulacion);
+						Seres* temp=new Piratas(raza,edad,nombre,fr,armadura,observacion,rey,fruta,oceano,tripulacion,funcion);
+						ser.push_back(temp);
 						break;
 					}
 				}
 				break;
 			}
 			case 2:{
+				string nombre;
+				cout<<"Ingrese Nombre ";
+				cin.ignore();
+				getline(cin,nombre);
+				cout<<endl;
+				switch(MenuFrutas()){
+					case 1:{
+						string tipo;
+						cout<<"Ingrese Tipo ";
+						cin.ignore();
+						getline(cin,tipo);
+						EvilFruit* fr_1=new Zoan(nombre,tipo);
+						frutos.push_back(fr_1);
+						break;
+					}
+					case 2:{
+						string elemento;
+						cout<<"Ingrese Elemento ";
+						cin.ignore();
+						getline(cin,elemento);
+						EvilFruit* fr_1=new Logia(nombre,elemento);
+						frutos.push_back(fr_1);
+						break;
+					}
+					case 3:{
+						string descripcion;
+						cout<<"Ingrese Descripcion: ";
+						cin.ignore();
+						getline(cin,descripcion);
+						EvilFruit* fr_1=new Paramecia(nombre,descripcion);
+						frutos.push_back(fr_1);
+						break;
+					}
+
+				}
 				break;
 			}
 
